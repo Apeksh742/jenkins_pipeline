@@ -1,4 +1,5 @@
 import smtplib 
+import getpass
   
 # creates SMTP session 
 s = smtplib.SMTP('smtp.gmail.com', 587) 
@@ -8,7 +9,7 @@ s.starttls()
   
 # Authentication 
 sender_email = "Apekshagarwal369@gmail.com"
-sender_password =  # "Enter Password here"
+sender_password =  getpass.getpass(prompt='Enter the password: ')
 receiver_email = "Apekshagarwal8@gmail.com"
 s.login(sender_email, sender_password ) 
   
